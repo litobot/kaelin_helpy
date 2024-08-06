@@ -1,0 +1,7 @@
+<div id="long_running_experiments">
+  <% @long_running_experiments.each do |lre| %>
+    <div id="experiment_id-<%= lre.id%>">
+      <%= lre.name %>
+    </div>
+  <% end %>
+</div>

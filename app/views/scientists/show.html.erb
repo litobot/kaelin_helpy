@@ -1,0 +1,14 @@
+Name: <%= @scientist.name %><br>
+Specialty: <%= @scientist.specialty %><br>
+University: <%= @scientist.university %><br>
+Lab: <%= @scientist.lab.name %><br>
+
+<div id="experiments">
+  <% @scientist.scientist_experiments.each do |se| %>
+    <div id="experiment_id-<%= se.experiment.id %>">
+      <%= se.experiment.name %>
+      <%= button_to "Delete", scientist_experiment_path(se.id), method: :delete %>
+    </div>
+  <% end %>
+
+</div>
